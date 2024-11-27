@@ -2,11 +2,11 @@ import json
 import csv
 
 # Input JSON file
-input_file = f"D:\\IIITD\\BDA\\Assignment_3\\Data\\train.json"
+input_file = f"~/Data/train.json"
 
 # Output CSV files
-papers_file = f"D:\\IIITD\\BDA\\Assignment_3\\Data\\papers.csv"
-citations_file = f"D:\\IIITD\\BDA\\Assignment_3\\Data\\citations.csv"
+papers_file = f"~/Data/papers.csv"
+citations_file = f"~/Data/citations.csv"
 
 # Initialize sets to store unique papers and citation relationships
 papers_set = set()
