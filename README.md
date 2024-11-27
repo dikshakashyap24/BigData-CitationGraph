@@ -65,4 +65,16 @@ The top-k most similar nodes are ranked for each factor, and results are reporte
   <img src="https://github.com/user-attachments/assets/840423d0-afe3-4ccf-af72-950bf1a7c399" alt="results" width="60%" />
 </p>
 
+## References
+
+## [Stanford Network Analysis Project](http://snap.stanford.edu/index.html)
+
+```bibtex
+@misc{snapnets,
+  author       = {Jure Leskovec and Andrej Krevl},
+  title        = {{SNAP Datasets}: {Stanford} Large Network Dataset Collection},
+  howpublished = {\url{http://snap.stanford.edu/data}},
+  month        = jun,
+  year         = 2014
+}
  
