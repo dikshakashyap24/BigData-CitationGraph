@@ -1,6 +1,6 @@
 # BigData-CitationGraph
 
-This project demonstrates the creation of a citation graph using **Neo4j** where:
+This project demonstrates the creation of a citation graph using **Neo4j**, using the <a href="https://snap.stanford.edu/data/com-DBLP.html">DBLP Dataset</a> .It uses Neo4j, where
 - **Nodes** represent academic papers.
 - **Edges** represent citation relationships.
 
@@ -18,7 +18,7 @@ The project follows these main steps:
 6. **Compute Similarity Using SimRank**  
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a6358fe1-19eb-4b3b-aaaa-74598bdf1a50" alt="pipeline" width="60%" />
+  <img src="https://github.com/user-attachments/assets/a6358fe1-19eb-4b3b-aaaa-74598bdf1a50" alt="pipeline" width="200px" />
 </p>
 
 ## Steps
