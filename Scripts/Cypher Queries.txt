@@ -1,0 +1,24 @@
+Cypher Queries
+
+Creating index on neo4j
+CREATE CONSTRAINT ON (p:Paper) ASSERT p.paper_id IS UNIQUE;
+Loading Papers(node) 
+:auto LOAD CSV WITH HEADERS FROM 'file:///id_paper.csv' AS row
+CALL {
+    WITH row
+    MERGE (p:Paper {ID: row.ID})
+    SET p.Authors = SPLIT(row.Authors, ', '),
+        p.Venue = row.Venue,
+        p.Labels = SPLIT(row.Labels, ', ')
+} IN TRANSACTIONS OF 10000 ROWS
+
+Loading References (Edges)
+:auto LOAD CSV WITH HEADERS FROM 'file:///references.csv' AS row
+CALL {
+    WITH row
+    MATCH (citing:Paper {ID: row.ID})  // Find the citing paper
+    MATCH (cited:Paper {ID: row.Reference}) // Find the cited paper
+    MERGE (citing)-[:CITES]->(cited)  // Create the CITES relationship
+} IN TRANSACTIONS OF 10000 ROWS
+
+
